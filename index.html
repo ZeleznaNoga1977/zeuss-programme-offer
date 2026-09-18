@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Proposal for a five-hour hands-on workshop on AI for Horizon Europe proposals, prepared for ZEUSS — EU Service Saxony."><title>From Grant Writing to Grant Engineering — ZEUSS Workshop</title><style>
+:root{--indigo:#362e6b;--terra:#d47a20;--ink:#2a2633;--muted:#625d6e;--paper:#faf8f5;--line:#e3ded7;--soft:#f0edf7}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 Inter,Segoe UI,Arial,sans-serif}button,a,summary{-webkit-tap-highlight-color:transparent}a{color:var(--indigo)}button{font:inherit}h1,h2,h3,p{margin:0}h1,h2,h3{color:var(--indigo)}h1,h2{font-family:'DM Serif Display',Georgia,serif;font-weight:400}h1{font-size:clamp(34px,4.5vw,52px);line-height:1.12;letter-spacing:-.035em;max-width:820px}h2{font-size:30px;line-height:1.25}h3{font-size:22px;line-height:1.3;font-weight:650;letter-spacing:-.02em}h4{font-size:13px;line-height:1.4;margin:0 0 7px;color:var(--indigo);font-weight:700}.wrap{max-width:1040px;margin:auto;padding:0 32px}.masthead{display:flex;justify-content:space-between;gap:16px;padding:25px 0 20px;border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.06em;color:var(--muted)}.brand{font-weight:750;color:var(--indigo);letter-spacing:.12em;text-transform:uppercase}.hero{padding:44px 0 32px}.kicker{font-size:12px;font-weight:700;letter-spacing:.08em;color:#925014;text-transform:uppercase;margin-bottom:16px}.subtitle{font-size:21px;line-height:1.45;color:var(--indigo);max-width:760px;margin-top:19px}.lead{max-width:790px;margin-top:20px;color:var(--muted)}.meta{margin-top:25px;display:inline-block;padding:10px 17px;border-left:3px solid var(--terra);background:white;font-size:15px;font-weight:650;color:var(--indigo)}.basis{border-top:1px solid var(--line);padding:21px 0 0;max-width:850px;color:var(--muted);font-size:14px}.journey{margin:40px 0}.journey h2{font-size:25px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;list-style:none;padding:0;margin:19px 0 0}.steps a{display:flex;flex-direction:column;gap:12px;height:100%;padding:17px 16px;border:1px solid var(--line);border-top:3px solid var(--indigo);border-radius:3px 3px 12px 12px;background:#fff;text-decoration:none;font-size:14px;line-height:1.45;font-weight:600}.steps li:last-child a{border-top-color:var(--terra)}.step-no{font-family:Georgia,serif;font-size:24px;font-weight:400;color:#925014}.steps a:hover{background:var(--soft)}:focus-visible{outline:3px solid #925014;outline-offset:5px}.section-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}.toolbar{display:flex;flex-wrap:wrap;gap:8px}.toolbar button{border:1px solid #b9b1cd;color:var(--indigo);border-radius:8px;padding:8px 12px;background:transparent;font-size:13px;cursor:pointer}.toolbar button:hover{background:var(--soft)}[hidden]{display:none!important}.cards{display:grid;gap:22px}.workshop{border:1px solid var(--line);border-radius:17px;background:white;overflow:hidden;scroll-margin-top:24px}.card-heading{display:grid;grid-template-columns:52px 1fr;gap:19px;padding:27px 30px 20px}.number{width:52px;height:52px;display:grid;place-items:center;background:var(--indigo);color:white;border-radius:12px;font:26px Georgia,serif}.workshop:last-child .number{background:#a45a15}.eyebrow{color:var(--muted);font-size:12px;margin-bottom:7px}.eyebrow span{margin-left:10px;padding-left:10px;border-left:1px solid var(--line)}.purpose{color:var(--muted);font-size:15px;line-height:1.55;margin-top:8px}.benefit{margin:0 30px 20px 101px;padding:15px 18px;background:var(--soft);border-radius:9px}.benefit p{font-size:14px;line-height:1.6}details{border-top:1px solid var(--line)}summary{display:flex;justify-content:space-between;align-items:center;gap:14px;list-style:none;cursor:pointer;padding:15px 30px 15px 101px;font-size:14px;font-weight:650;color:var(--indigo)}summary::-webkit-details-marker{display:none}summary:hover{background:#faf9fc}.chevron{font-size:22px;font-weight:400;line-height:1;transition:transform .15s}details[open] .chevron{transform:rotate(45deg)}.detail-content{padding:3px 30px 26px 101px}ul{padding-left:20px;margin:9px 0 0}li{padding-left:3px}.detail-content li{font-size:14px;margin-bottom:8px}.detail-content li::marker{color:#a45a15}.homework{margin-top:18px;border-top:1px dashed #d0c9bf;padding-top:15px}.homework p{font-size:14px;color:var(--muted)}.closing{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:42px 0 0}.closing section{padding:25px;border:1px solid var(--line);border-radius:14px}.closing h2{font-size:25px;margin-bottom:14px}.closing p{font-size:14px;color:var(--muted);margin-top:13px}.closing .resources{background:var(--indigo);border-color:var(--indigo)}.resources h2{color:white}.resources p{color:#eeeaf8}.confirmation{margin:30px 0 0;padding:20px 24px;border-left:3px solid var(--terra);background:#f3ece3;color:var(--ink);font-size:14px}footer{display:flex;justify-content:space-between;gap:20px;padding:24px 0 30px;margin-top:30px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.offer{margin:38px 0 0}
+.offer-box{border-radius:17px;overflow:hidden;border:1px solid var(--line);background:white}
+.offer-head{width:100%;display:flex;align-items:center;gap:14px;background:var(--indigo);color:white;border:none;border-top:4px solid var(--terra);padding:22px 28px;cursor:pointer;font:inherit;text-align:left}
+.offer-head .offer-big{font-family:'DM Serif Display',Georgia,serif;font-size:30px;letter-spacing:-.02em}
+.offer-head .offer-sub{font-size:13px;color:#e8e4f5;margin-left:auto}
+.offer-head .offer-chev{font-size:20px;transition:transform .3s ease}
+.offer-box.open .offer-chev{transform:rotate(180deg)}
+.offer-head:hover .offer-sub{color:var(--terra)}
+.offer-fold{max-height:0;overflow:hidden;transition:max-height .5s ease}
+.offer-inner{padding:22px 28px 26px}
+.offer-inner .offer-lead{font-size:14px;color:var(--muted);margin:0 0 14px}
+.offer-inner ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px}
+.offer-inner li{font-size:14px;line-height:1.6}
+.offer-inner li b{color:var(--indigo)}
+.offer-inner .bonus{background:#f3ece3;border-left:3px solid var(--terra);padding:11px 15px;border-radius:0 9px 9px 0}
+@media(prefers-reduced-motion:reduce){.offer-fold,.offer-head .offer-chev{transition:none}}
+@media(max-width:720px){.offer-head{padding:16px 20px}.offer-head .offer-big{font-size:24px}.offer-head .offer-sub{display:none}.offer-inner{padding:16px 20px 20px}}
+@media print{.offer{break-inside:avoid;margin-top:20px}.offer-fold{max-height:none!important}.offer-chev{display:none}}
+.model{margin:38px 0 0}
+.model-frame{width:100%;height:800px;border:1px solid var(--line);border-radius:12px;background:white;display:block;margin-top:4px}
+.model-print{display:none;font-size:14px;color:var(--muted)}
+@media(max-width:820px){.model-frame{height:1150px}}
+@media print{.model-frame{display:none}.model-print{display:block}.model{break-inside:avoid;margin-top:20px}}
+@media(max-width:720px){.wrap{padding:0 20px}.masthead{font-size:11px;align-items:flex-start}.masthead span:last-child{text-align:right}.hero{padding-top:32px}.subtitle{font-size:19px}.steps{grid-template-columns:1fr 1fr}.steps a{padding:14px}.section-heading{align-items:flex-start;flex-direction:column}.card-heading{padding:22px 20px 18px;grid-template-columns:40px 1fr;gap:13px}.number{width:40px;height:40px;font-size:21px}h3{font-size:20px}.benefit{margin:0 20px 18px}.detail-content{padding:3px 20px 22px}summary{padding:14px 20px}.closing{grid-template-columns:1fr;gap:18px}.closing section{padding:22px}footer{flex-direction:column;gap:6px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.chevron{transition:none}}
+@media print{@page{size:A4;margin:14mm}body{background:white;font-size:10pt;line-height:1.45;print-color-adjust:exact;-webkit-print-color-adjust:exact}.wrap{max-width:none;padding:0}.masthead{padding:0 0 10px}.hero{padding:20px 0}h1{font-size:29pt;max-width:none}.subtitle{font-size:15pt}.lead{margin-top:12px}.meta{margin-top:14px}.basis{font-size:10pt}.journey{margin:22px 0}.journey h2{font-size:18pt}.steps{gap:8px}.steps a{padding:10px;font-size:9pt}.step-no{font-size:17pt}.toolbar,summary,.skip-link{display:none!important}.cards{display:block}.workshop{break-inside:avoid;margin:0 0 15px;border-radius:8px}.card-heading{padding:16px 18px 12px;grid-template-columns:35px 1fr;gap:12px}.number{width:35px;height:35px;font-size:19px}h3{font-size:14pt}.purpose{font-size:10pt}.benefit{margin:0 18px 12px 65px;padding:10px 13px}.benefit p,.detail-content li,.homework p{font-size:9.5pt}.detail-content{padding:12px 18px 15px 65px}.detail-content li{margin-bottom:5px}details::details-content{display:block;content-visibility:visible;height:auto}details>*:not(summary){display:block!important}.closing{display:block;margin-top:20px}.closing section{break-inside:avoid;margin-top:14px;padding:18px}.closing h2{font-size:17pt}.closing p,.confirmation{font-size:10pt}.confirmation{break-inside:avoid}footer{margin-top:20px;padding-bottom:0}h2,h3,h4{break-after:avoid}}
+.skip-link{position:absolute;top:-100px;left:20px;background:white;padding:10px;z-index:5}.skip-link:focus{top:10px}
+
+@media print{
+.hero{padding:12px 0}.kicker{margin-bottom:9px}h1{font-size:24pt}.subtitle{font-size:12pt;margin-top:10px}.lead{font-size:10pt;margin-top:10px}.meta{margin-top:10px;padding:6px 12px;font-size:10pt}.basis{padding-top:12px}.journey{margin:15px 0}.journey h2{font-size:16pt}.steps{margin-top:10px}.steps a{padding:8px;gap:6px;font-size:8.5pt}.step-no{font-size:14pt}.section-heading{margin-bottom:12px}#program-title{font-size:20pt}.card-heading{padding-top:12px;padding-bottom:10px}.detail-content{padding-top:9px;padding-bottom:12px}.homework{margin-top:10px;padding-top:10px}.closing{display:grid;grid-template-columns:1fr 1fr;gap:14px;break-inside:avoid}.closing section{padding:14px;margin-top:0}.closing h2{font-size:15pt}.closing p{font-size:9.5pt}.confirmation{margin-top:18px;padding:13px 16px}
+}
+
+/* Visual revision: a four-stage learning journey. Print keeps the document layout. */
+@media screen {
+:root{--paper:#f6f5fa;--muted:#55516a;--soft:#edeaf6}body{font-size:1rem;line-height:1.65;background:linear-gradient(180deg,#fff 0,#f5f3fa 65%,#fff 100%)}.wrap{max-width:1180px;padding:0 40px}.masthead{border:0;padding:24px 0;font-size:13px}.brand{letter-spacing:.13em}.hero{position:relative;isolation:isolate;padding:54px 52px 42px;margin:0 -12px 28px;border-radius:26px;background:linear-gradient(115deg,#282148 0%,#362e6b 62%,#51438d 100%);box-shadow:0 24px 65px #362e6b22;overflow:hidden;color:white}.hero:after{content:'04';position:absolute;right:-12px;bottom:-80px;font:360px/.9 Georgia,serif;letter-spacing:-.12em;color:#ffffff08;z-index:-1;pointer-events:none}.hero:before{content:'';position:absolute;left:0;top:0;width:125px;height:6px;background:var(--terra);border-radius:0 0 7px 0}.hero h1{color:white;font-size:clamp(38px,4.8vw,62px);max-width:880px;letter-spacing:-.04em;line-height:1.06}.hero .kicker{color:#ffc483;font-size:13px;letter-spacing:.12em;margin-bottom:25px}.subtitle{color:#ffbd78;font-size:clamp(19px,2.1vw,24px);line-height:1.4;max-width:810px;margin-top:25px}.hero .lead{color:#e8e3f5;font-size:16px;line-height:1.75;max-width:815px}.meta{background:#ffffff0b;color:white;border:1px solid #ffffff26;border-left:3px solid var(--terra);border-radius:0 8px 8px 0;padding:10px 16px;margin-top:24px;font-size:16px}.basis{border:0;border-left:3px solid #d47a2066;padding:2px 0 2px 20px;margin:34px 0 45px;max-width:920px;font-size:16px}.journey{margin:0 0 48px;position:relative}.journey h2{font-size:34px;letter-spacing:-.025em}.journey-intro{color:var(--muted);font-size:14px;margin-top:8px}.steps{position:relative;grid-template-columns:repeat(4,1fr);gap:0;margin-top:27px;isolation:isolate;--reach:0%}.steps:before,.steps:after{content:'';position:absolute;left:12.5%;top:26px;height:3px;z-index:-1}.steps:before{width:75%;background:#d8d2e5}.steps:after{width:var(--reach);background:var(--terra);transition:width .65s cubic-bezier(.22,1,.36,1)}.steps li{padding:0}.steps a{display:flex;align-items:center;text-align:center;gap:13px;padding:0 12px 19px;border:0;border-radius:0;background:transparent;font-size:15px;line-height:1.4;height:100%;transition:color .25s,transform .25s}.steps a:hover{background:transparent;transform:translateY(-3px)}.steps a>span:last-child{max-width:225px}.steps li:last-child a{border:0}.step-no{width:54px;height:54px;display:grid;place-items:center;background:#f6f5fa;border:2px solid #cdc5dc;border-radius:50%;font-size:22px;color:#62577c;transition:background .3s,color .3s,border-color .3s,box-shadow .3s}.steps a[aria-current='step'] .step-no{background:var(--indigo);border-color:var(--indigo);color:#fff;box-shadow:0 0 0 6px #362e6b0d,0 8px 20px #362e6b25}.steps .earlier .step-no{border-color:var(--terra);color:#965012;background:#fff7ee}.steps a[aria-current='step']{color:var(--indigo)}.steps li:last-child a[aria-current='step'] .step-no{background:var(--terra);border-color:var(--terra);color:#251c37}.journey-result{background:#362e6b;color:white;border-radius:18px;padding:27px 30px;display:grid;grid-template-columns:94px 1fr auto;gap:23px;align-items:center;position:relative;overflow:hidden;min-height:190px;box-shadow:0 15px 35px #362e6b18}.result-number{font:72px/1 Georgia,serif;color:#ffbd78;font-variant-numeric:tabular-nums}.result-label{font-size:13px;color:#e0d8f5;margin-bottom:5px}.result-title{font-size:23px;line-height:1.3;color:white;margin-bottom:8px;font-weight:650;letter-spacing:-.015em}.result-copy{font-size:16px;line-height:1.55;color:#e8e3f5;max-width:680px}.journey-controls{display:flex;gap:8px;align-self:end}.journey-controls button{width:48px;height:48px;display:grid;place-items:center;border:none;background:var(--terra);border-radius:50%;color:#251c37;cursor:pointer;font-size:23px;font-weight:700;box-shadow:0 2px 10px rgba(0,0,0,.28);transition:filter .2s,transform .15s}.journey-controls button:hover:not(:disabled){filter:brightness(1.12);transform:scale(1.06)}.journey-controls button:disabled{opacity:.35;box-shadow:none;cursor:default}.journey-controls button:focus-visible{outline-color:#ffbd78}.journey-result:after{content:'';position:absolute;bottom:0;left:0;height:4px;width:var(--stage-width,25%);background:var(--terra);transition:width .65s cubic-bezier(.22,1,.36,1)}.result-copy-wrap.changing{animation:stage-enter .4s ease both}.reading-rail{position:fixed;top:12px;left:50%;transform:translate(-50%,-90px);width:min(670px,calc(100% - 32px));z-index:20;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 14px 10px 20px;background:#292244f5;border:1px solid #ffffff33;box-shadow:0 7px 25px #221a442b;backdrop-filter:blur(14px);border-radius:50px;opacity:0;visibility:hidden;transition:transform .3s,opacity .3s,visibility .3s}.reading-rail.visible{transform:translate(-50%,0);opacity:1;visibility:visible}.reading-label{font-size:14px;color:#fff}.rail-links{display:flex;gap:6px}.rail-links a{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:1px solid #ffffff38;text-decoration:none;color:#fff;font-size:14px;font-weight:650;transition:background .25s}.rail-links a[aria-current='step']{background:#ffbc77;border-color:#ffbc77;color:#2a214b}.rail-links a:focus-visible{outline-color:#ffbc77}.section-heading{margin-bottom:24px}.section-heading h2{font-size:36px}.toolbar button{font-size:14px;background:#fff;border:1px solid #cbc3da;padding:9px 13px;border-radius:8px;transition:background .2s,transform .2s}.toolbar button:hover{background:#ece7f6;transform:translateY(-2px)}.cards{gap:26px;position:relative;padding-left:24px}.cards:before{content:'';position:absolute;left:0;top:35px;bottom:35px;width:3px;border-radius:10px;background:linear-gradient(var(--indigo) 0%,#746098 58%,var(--terra) 100%)}.workshop{position:relative;overflow:visible;border:1px solid #e3deed;border-radius:18px;box-shadow:0 8px 24px #362e6b07;scroll-margin-top:90px;transition:border-color .4s,box-shadow .4s,transform .4s;background:#fff}.workshop:before{content:'';position:absolute;left:-30px;top:38px;width:13px;height:13px;border-radius:50%;background:#c8c0d9;border:3px solid #f6f5fa;box-shadow:0 0 0 1px #c8c0d9;transition:background .3s,box-shadow .3s}.workshop.is-current{border-color:#8675ad;box-shadow:0 15px 42px #362e6b13}.workshop.is-current:before{background:var(--terra);box-shadow:0 0 0 4px #d47a201e}.card-heading{padding:28px 32px 21px;grid-template-columns:64px 1fr;gap:22px}.number{width:64px;height:64px;font-size:32px;border-radius:16px;background:linear-gradient(145deg,#362e6b,#51428c);box-shadow:0 6px 15px #362e6b22}.workshop:nth-child(2) .number{background:#51428c}.workshop:nth-child(3) .number{background:#70508c}.workshop:last-child .number{background:var(--terra);color:#251c37}.eyebrow{font-size:13px;margin-bottom:8px}.purpose{font-size:16px;line-height:1.65}h3{font-size:25px;line-height:1.3}.benefit{margin:0 32px 23px 118px;padding:17px 20px;border-radius:0 10px 10px 0;border-left:3px solid #79689e;background:linear-gradient(90deg,#f0ecf8,#faf9fd)}.benefit h4{font-size:14px;color:#504171}.benefit p{font-size:16px;line-height:1.65}.workshop:last-child .benefit{background:linear-gradient(90deg,#fff1e1,#fffaf5);border-left-color:var(--terra)}summary{padding:17px 32px 17px 118px;font-size:15px;border-radius:0 0 18px 18px}.detail-content{padding:5px 32px 28px 118px}h4{font-size:14px}.detail-content li,.homework p{font-size:16px;line-height:1.65}.detail-content li{margin-bottom:10px;padding-left:5px}.detail-content li::marker{color:var(--terra)}.homework{background:#f9f7fc;border:0;border-left:3px solid var(--terra);padding:15px 18px;border-radius:0 8px 8px 0;margin-top:22px}.closing{gap:24px;margin-top:45px}.closing section{padding:29px;border:0;background:#ebe7f3}.closing h2{font-size:29px}.closing p{font-size:16px;line-height:1.7}.closing .resources{background:linear-gradient(130deg,#362e6b,#4e3e81);box-shadow:0 15px 35px #362e6b1a;position:relative}.resources:before{content:'';display:block;width:45px;height:4px;background:var(--terra);margin-bottom:20px}.confirmation{font-size:15px;line-height:1.7;background:#fff0de;border-left:4px solid var(--terra);border-radius:0 12px 12px 0;padding:21px 25px}footer{font-size:13px}.hero h1{animation:hero-enter .7s ease both}.hero .subtitle{animation:hero-enter .7s .09s ease both}.hero .lead{animation:hero-enter .7s .16s ease both}.reveal.entered{animation:card-enter .6s ease both}details[open] .detail-content{animation:stage-enter .3s ease both}
+@keyframes stage-enter{from{opacity:.25;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@keyframes hero-enter{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes card-enter{from{opacity:.45;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+}
+@media screen and (max-width:850px){.wrap{padding:0 24px}.hero{padding:35px 30px;margin-left:0;margin-right:0}.journey-result{grid-template-columns:65px 1fr;gap:15px;padding:24px}.result-number{font-size:58px}.journey-controls{grid-column:2;justify-self:end}.benefit{margin-left:32px}summary,.detail-content{padding-left:32px}.steps a{font-size:14px;padding-left:7px;padding-right:7px}.section-heading{align-items:flex-start;flex-direction:column}.closing{grid-template-columns:1fr}.hero:after{font-size:260px;bottom:-40px}}
+@media screen and (max-width:520px){.wrap{padding:0 18px}.masthead{font-size:12px;gap:10px}.hero{padding:29px 22px;border-radius:18px}.hero h1{font-size:37px;line-height:1.08}.hero .kicker{font-size:12px;margin-bottom:20px}.subtitle{font-size:20px}.hero .lead{font-size:16px}.meta{font-size:14px;padding:9px 11px}.basis{font-size:15px;margin:27px 0 34px}.journey h2{font-size:29px}.steps{grid-template-columns:1fr 1fr;gap:15px 8px;margin-top:21px}.steps:before,.steps:after{display:none}.steps a{padding:10px 9px;border:1px solid #ded6eb;border-radius:12px;background:#fff;gap:10px;font-size:14px}.steps li:last-child a{border:1px solid #ded6eb}.steps a[aria-current='step']{background:#eee8f7;border-color:#776399}.step-no{height:42px;width:42px;font-size:19px}.steps a[aria-current='step'] .step-no{box-shadow:none}.journey-result{margin-top:18px;grid-template-columns:1fr;gap:8px;padding:22px;min-height:255px}.result-number{display:none}.result-title{font-size:22px}.result-copy{font-size:16px}.journey-controls{grid-column:1;margin-top:4px}.cards{padding-left:14px;gap:22px}.cards:before{left:0}.workshop:before{left:-20px;top:31px}.card-heading{padding:23px 19px 17px;grid-template-columns:43px 1fr;gap:12px}.number{width:43px;height:43px;font-size:23px;border-radius:11px}h3{font-size:21px}.purpose{font-size:16px}.eyebrow{font-size:12px}.eyebrow span{padding-left:6px;margin-left:6px}.benefit{margin:0 18px 18px;padding:14px 15px}.benefit p{font-size:16px}summary{padding:15px 18px;font-size:14px}.detail-content{padding:4px 18px 23px}.homework{padding:12px 14px}.toolbar{gap:6px}.toolbar button{font-size:13px;padding:9px 10px}.section-heading h2{font-size:30px}.closing section{padding:24px}.closing h2{font-size:26px}.reading-rail{padding:8px 10px 8px 15px;gap:8px}.reading-label{font-size:13px}.rail-links a{width:31px;height:31px}.rail-links{gap:5px}.confirmation{padding:18px}.steps a:hover{transform:none}}
+@media print{.journey-result,.journey-intro,.reading-rail{display:none!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Fold each complete workshop around its persistent heading. */
+.fold{border-top:0;perspective:1100px}.card-toggle{display:block;position:relative;padding:0!important;border-radius:18px;list-style:none}.card-toggle .card-heading{padding-right:70px}.card-toggle:hover{background:#f8f6fc}.card-toggle:focus-visible{outline-offset:5px}.fold-indicator{position:absolute;right:27px;top:35px;display:grid;place-items:center;width:30px;height:30px;border:1px solid #d6cfe4;border-radius:50%;font-size:23px;line-height:1;font-weight:400;color:var(--indigo);background:#fff;transition:transform .5s,background .3s}.fold:not([open]) .fold-indicator{transform:rotate(90deg)}.fold-body{overflow:hidden;overflow:clip}.fold-inner{display:flow-root;transform-origin:50% 0%;backface-visibility:hidden}.fold .detail-content{border-top:1px solid var(--line);padding-top:20px;animation:none!important}.fold .benefit{margin-top:0}.cards{overflow-anchor:none}.workshop.is-folding{animation:none!important}.fold:not([open]) .card-heading{padding-bottom:27px}.fold .purpose{font-weight:400}.section-heading{display:block!important;text-align:center}.section-heading h2{margin-bottom:19px}.toolbar{position:relative;display:flex;justify-content:center;align-items:center;min-height:52px;width:100%;margin-bottom:6px}.fold-actions{display:flex;gap:5px;padding:5px;border:1px solid #d7cfe5;background:#eae5f2;border-radius:14px;box-shadow:0 5px 16px #362e6b09}.fold-actions button{min-width:133px;border:0;background:transparent;color:var(--indigo);border-radius:9px;padding:10px 15px;font-weight:650}.fold-actions button span{margin-right:6px;font-size:18px;line-height:1}.fold-actions button[aria-pressed="true"]{background:var(--indigo);color:white;box-shadow:0 3px 9px #362e6b20}.fold-actions button:hover{transform:none;background:#fff}.fold-actions button[aria-pressed="true"]:hover{background:#4a3c7c}#print{position:absolute;right:0;font-size:13px}.fold .fold-indicator{pointer-events:none}
+@media screen and (max-width:850px){.toolbar{flex-wrap:wrap;gap:12px}#print{position:static;margin-left:0}.fold-actions{margin:0 calc((100% - 290px)/2)}.card-toggle .card-heading{padding-right:62px}.fold-indicator{right:18px;top:29px}}
+@media screen and (max-width:520px){.fold-actions{margin:0;flex:0 0 auto}.toolbar{flex-direction:column}.fold-actions button{min-width:126px;padding:9px 12px;font-size:14px}.fold-indicator{right:13px;top:27px;width:25px;height:25px;font-size:20px}.card-toggle .card-heading{padding-right:47px}.fold .detail-content{padding-top:17px}.fold:not([open]) .card-heading{padding-bottom:22px}}
+@media print{summary.card-toggle{display:block!important;padding:0!important}.fold-indicator{display:none!important}.fold-body{display:block!important;height:auto!important;overflow:visible!important}.fold-inner{opacity:1!important;transform:none!important}.card-toggle .card-heading{padding-right:18px}.fold .detail-content{padding-top:9px}.section-heading{text-align:left}.section-heading h2{margin-bottom:12px}.fold:not([open]) .card-heading{padding-bottom:10px}}
+
+/* The complete programme unfolds from a single geometric seed. */
+.program-seed{height:320px;position:relative;text-align:center;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 50% 42%,#e5dcf3 0,transparent 62%);border-radius:24px}.cube-button{display:flex;flex-direction:column;align-items:center;width:100%;height:277px;border:0;background:transparent;color:var(--indigo);cursor:pointer;font:inherit;padding:12px 0 0}.cube-view{display:grid;place-items:center;width:220px;height:200px;perspective:800px}.program-cube{display:block;position:relative;width:96px;height:96px;transform-style:preserve-3d;transform:rotateX(-22deg) rotateY(-32deg);animation:cube-orbit 15s linear infinite}.cube-face{position:absolute;inset:0;display:grid;place-items:center;border:1px solid #ffffff65;border-radius:8px;backface-visibility:hidden;font:35px/1 Georgia,serif;color:white;box-shadow:inset 0 0 25px #ffffff0b;transition:transform .65s cubic-bezier(.22,.75,.22,1),opacity .5s}.front{background:#362e6b;transform:translateZ(48px)}.back{background:#584387;transform:rotateY(180deg) translateZ(48px)}.right{background:#d47a20;transform:rotateY(90deg) translateZ(48px);color:#221b35}.left{background:#9464a3;transform:rotateY(-90deg) translateZ(48px)}.top{background:#ee9c43;transform:rotateX(90deg) translateZ(48px)}.bottom{background:#251d4a;transform:rotateX(-90deg) translateZ(48px)}.cube-invitation{font-size:19px;font-weight:650;line-height:1.4}.cube-hint{font-size:14px;font-weight:400;color:var(--muted);margin-top:5px}.pause-cube{border:0;border-bottom:1px solid #b7aacb;color:#685978;background:transparent;font-family:inherit;font-size:13px;line-height:1.5;cursor:pointer;padding:3px 0}.cube-button:focus-visible{outline-offset:-7px;border-radius:24px}.cube-button:hover .cube-invitation{text-decoration:underline;text-underline-offset:5px}.program-seed.is-paused .program-cube{animation-play-state:paused}.program-seed.is-paused .cube-face{transition:none}.program-seed.is-unfolding .program-cube{animation-play-state:paused}.program-seed.is-unfolding .front{transform:translate3d(-125px,10px,70px) rotateY(-60deg);opacity:0}.program-seed.is-unfolding .right{transform:translate3d(150px,25px,40px) rotateY(50deg);opacity:0}.program-seed.is-unfolding .left{transform:translate3d(-160px,45px,0) rotateY(-80deg);opacity:0}.program-seed.is-unfolding .back{transform:translate3d(100px,65px,-100px) rotateY(180deg);opacity:0}.program-seed.is-unfolding .top{transform:translate3d(0,-110px,30px) rotateX(120deg);opacity:0}.program-seed.is-unfolding .bottom{transform:translate3d(0,120px,30px) rotateX(-120deg);opacity:0}.program-seed.is-unfolding .cube-invitation,.program-seed.is-unfolding .cube-hint,.program-seed.is-unfolding .pause-cube{opacity:0;transition:opacity .2s}#program-reveal{overflow:hidden;overflow:clip;overflow-anchor:none;perspective:1600px}.program-reveal-inner{display:flow-root;transform-origin:50% 0%;padding:6px 5px 12px}.program-reveal-inner>.cards{margin-top:0}.program-reveal-inner .reveal.entered{animation:none!important}.scene-closed footer{margin-top:15px}.scene-closed .reading-rail{display:none!important}@keyframes cube-orbit{from{transform:rotateX(-22deg) rotateY(-32deg)}to{transform:rotateX(-22deg) rotateY(328deg)}}
+@media(prefers-reduced-motion:reduce){.program-cube{animation:none!important}.cube-face{transition:none!important}.pause-cube{display:none}}
+@media print{.program-seed{display:none!important}#program-reveal{height:auto!important;overflow:visible!important;perspective:none}.program-reveal-inner{opacity:1!important;transform:none!important;padding:0}}
+</style></head>
+<body><nav class="reading-rail" hidden aria-label="Current block"><span class="reading-label">Block <b id="rail-stage">01</b> / 04</span><div class="rail-links"><a href="#delavnica-1" aria-label="Block 1">1</a><a href="#delavnica-2" aria-label="Block 2">2</a><a href="#delavnica-3" aria-label="Block 3">3</a><a href="#delavnica-4" aria-label="Block 4">4</a></div></nav><a class="skip-link" href="#program">Skip to the programme</a><div class="wrap">
+<div class="masthead"><span class="brand">Global Disruption</span><span>ZEUSS · EU Service Saxony</span></div>
+<header class="hero"><p class="kicker">Workshop proposal</p><h1>From Grant Writing to Grant Engineering</h1><p class="subtitle">AI for Horizon Europe proposals — a hands-on workshop for researchers and research managers</p><p class="lead">Five practical hours: you will analyse a real Horizon Europe call with ChatGPT, turn evidence into a defensible GO/NO-GO decision, strengthen a concept against the call — and, in groups, assemble an AI-supported proposal workflow with human judgement at every checkpoint.</p><p class="meta">5 working hours + 2 × 15 min breaks · in person · TU Dresden</p></header>
+<main><p class="basis">The programme follows your brief: practical work over theory, individual and group formats, ChatGPT as the working tool. It builds on trainings delivered for research institutions and European Commission audiences.</p>
+<nav class="journey" aria-labelledby="journey-title"><h2 id="journey-title">Progress through the workshop</h2><p class="journey-intro">Select a block to see what you will be able to do after the training — with AI.</p><ol class="steps"><li><a href="#delavnica-1"><span class="step-no">01</span><span>Analyse EU calls systematically and at scale</span></a></li><li><a href="#delavnica-2"><span class="step-no">02</span><span>Turn evidence into a decision</span></a></li><li><a href="#delavnica-3"><span class="step-no">03</span><span>Strengthen a concept before drafting</span></a></li><li><a href="#delavnica-4"><span class="step-no">04</span><span>Assemble the workflow as a team</span></a></li></ol><div class="journey-result" hidden><span class="result-number" aria-hidden="true">01</span><div class="result-copy-wrap" role="status" aria-live="polite" aria-atomic="true"><p class="result-label">After Block 1</p><h3 class="result-title">I can analyse a call</h3><p class="result-copy">I structure a Horizon Europe call with ChatGPT, extract the facts that matter and check every answer against the source.</p></div><div class="journey-controls"><button type="button" id="previous-stage" aria-label="Previous block" disabled>←</button><button type="button" id="next-stage" aria-label="Next block">→</button></div></div></nav>
+<section id="program" aria-labelledby="program-title"><div class="section-heading"><h2 id="program-title">Workshop programme</h2><div class="toolbar" hidden><div class="fold-actions" role="group" aria-label="Show all blocks"><button id="expand" type="button"><span aria-hidden="true">↗</span> Expand all</button><button id="collapse" type="button"><span aria-hidden="true">↙</span> Collapse all</button></div><button id="print" type="button">Print / save PDF</button></div></div><div class="program-seed" hidden><button id="open-cube" class="cube-button" type="button" aria-label="Unfold the full programme" aria-controls="program-reveal"><span class="cube-view" aria-hidden="true"><span class="program-cube"><span class="cube-face front">01</span><span class="cube-face back">03</span><span class="cube-face right">02</span><span class="cube-face left">04</span><span class="cube-face top"></span><span class="cube-face bottom"></span></span></span><span class="cube-invitation">Open the programme</span><span class="cube-hint">Click the cube or “Expand all”.</span></button><button id="pause-cube" class="pause-cube" type="button" aria-pressed="false">Pause rotation</button></div><div id="program-reveal"><div class="program-reveal-inner"><div class="cards"><article class="workshop reveal" id="delavnica-1" aria-labelledby="naslov-1">
+      <details class="fold" open><summary class="card-toggle" aria-controls="fold-body-1"><div class="card-heading"><span class="number" aria-hidden="true">01</span><div><p class="eyebrow">Block 1 <span>90 minutes</span></p><h3 id="naslov-1">Read the call systematically — and miss nothing</h3><p class="purpose">A Horizon Europe call carries more decisions than text — extract all of them, and check every answer.</p></div></div><span class="fold-indicator" aria-hidden="true">−</span></summary><div class="fold-body" id="fold-body-1"><div class="fold-inner"><div class="benefit"><h4>What your team gains</h4><p>Two gains in one block: a working command of ChatGPT — what it can do, where it errs, how to guide it — and its first serious application: EU calls analysed systematically and at scale, verified against the source — packaged as a skill you'll reach for every time a new call opens.</p></div><div class="detail-content"><h4>Main contents</h4><ul><li>How to set up and personalise ChatGPT and its power functions.</li><li>Setting up your working Project — and understanding the loop between Chat and Work: Chat brainstorms, Work executes.</li><li>From 5D prompt to skills: the skill finds, locates and cites — it never decides.</li></ul><div class="homework"><h4>You take home</h4><p>your own call-analysis skill, built during the session — plus the filled required-facts checklist.</p></div></div></div></div></details></article><article class="workshop reveal" id="delavnica-2" aria-labelledby="naslov-2">
+      <details class="fold" open><summary class="card-toggle" aria-controls="fold-body-2"><div class="card-heading"><span class="number" aria-hidden="true">02</span><div><p class="eyebrow">Block 2 <span>60 minutes</span></p><h3 id="naslov-2">From idea to evidence: the GO/NO-GO discipline</h3><p class="purpose">A weak early fit cannot be written away later — decide where writing time goes before it is spent.</p></div></div><span class="fold-indicator" aria-hidden="true">−</span></summary><div class="fold-body" id="fold-body-2"><div class="fold-inner"><div class="benefit"><h4>What your team gains</h4><p>An evidence-first decision practice: AI organises what is true about a call, a profile and an idea; you verify, endorse and decide.</p></div><div class="detail-content"><h4>Main contents</h4><ul><li>Using AI to organise everything that bears on the decision: the call analysis, the project concept, your organisation's profile and your own thoughts.</li><li>Building new skills — and learning how the whole process revolves around human judgement: what moves forward, what stops.</li><li>Designing a small working process of your own: which inputs go in, what comes out, how the steps are packed into skills — and where your judgement decides.</li></ul><div class="homework"><h4>You take home</h4><p>an evidence-capture routine and a checkpoint discipline your team can repeat.</p></div></div></div></div></details></article><article class="workshop reveal" id="delavnica-3" aria-labelledby="naslov-3">
+      <details class="fold" open><summary class="card-toggle" aria-controls="fold-body-3"><div class="card-heading"><span class="number" aria-hidden="true">03</span><div><p class="eyebrow">Block 3 <span>45 minutes</span></p><h3 id="naslov-3">Strengthen the concept against the call</h3><p class="purpose">Objectives, work plan and argumentation that survive evaluation — fixed before drafting starts.</p></div></div><span class="fold-indicator" aria-hidden="true">−</span></summary><div class="fold-body" id="fold-body-3"><div class="fold-inner"><div class="benefit"><h4>What your team gains</h4><p>Making a concept that got its GO stronger with AI: weak spots found, drafts improved — and the judgement remains yours. A routine you can repeat on every future concept.</p></div><div class="detail-content"><h4>Main contents</h4><ul><li>Learning how to pack a complex piece of work — a full concept review — into a new repeatable skill.</li><li>Checking the concept against the call: scope, requirements, coherence and workload — question by question.</li><li>Structure, coherence and clarity passes with ChatGPT — plus the citation discipline that prevents invented sources.</li></ul><div class="homework"><h4>You take home</h4><p>your own concept-check skill, ready for the next concept — plus the checklist it runs on.</p></div></div></div></div></details></article><article class="workshop reveal" id="delavnica-4" aria-labelledby="naslov-4">
+      <details class="fold" open><summary class="card-toggle" aria-controls="fold-body-4"><div class="card-heading"><span class="number" aria-hidden="true">04</span><div><p class="eyebrow">Block 4 <span>85 minutes</span></p><h3 id="naslov-4">Group work: assemble your AI-supported workflow</h3><p class="purpose">You have checked the concept — now design what comes next.</p></div></div><span class="fold-indicator" aria-hidden="true">−</span></summary><div class="fold-body" id="fold-body-4"><div class="fold-inner"><div class="benefit"><h4>What your team gains</h4><p>Beyond understanding what AI workflows are: the capability to build one. Every group designs a working piece of the process itself — and leaves knowing how to do it again at home.</p></div><div class="detail-content"><h4>Main contents</h4><ul><li>Zooming out to the big picture: where everything we did since the morning sits in the full proposal-development chain — and what comes next.</li><li>Groups pick the next two or three steps they want to cover — and work them in detail: define the inputs and outputs, develop the skills, and run them to see whether they work.</li><li>Each group presents its approach — what worked, what didn't, lessons learned — so groups learn from one another and lay the foundations for AI workflows that serve teams, not just individuals.</li></ul></div></div></div></details></article></div>
+<div class="closing"><section aria-labelledby="method-title"><h2 id="method-title">How we work</h2><p>This is practical work, built on the key concepts of AI workflow engineering. Demonstrations first, then individual and group work — led by Kristjan Zemljič throughout, with prepared examples so participants with different experience can work at their own pace. Checking results is part of every block, and the day closes with the take-home kit.</p><p>We work on real Horizon Europe material and carefully prepared examples. Confidential or unpublished research content is never entered into AI tools.</p></section><section class="resources" aria-labelledby="resources-title"><h2 id="resources-title">Materials and tools you keep</h2><p>Participants take home the skills built during the day — call analysis, evidence capture, concept check — together with the templates and checklists behind them, the presentation, and everything created during the event.</p><p>Group results are collected in a shared folder: each contribution carries the workflow design, the skills that run it, usage instructions and authors — available to the teams of all participating universities.</p></section></div>
+<p class="confirmation">This proposal is intended to align content, emphasis and format. The exact date and daily schedule will be agreed with the organiser.</p></div></div></section>
+<section class="offer" aria-labelledby="offer-title">
+<div class="offer-box" id="offer-box">
+<button type="button" class="offer-head" id="offer-open" aria-expanded="false" aria-controls="offer-details">
+<span class="offer-big" id="offer-title">Offer</span>
+<span class="offer-sub">Click for details</span>
+<span class="offer-chev">▾</span>
+</button>
+<div class="offer-fold" id="offer-details">
+<div class="offer-inner">
+<p class="offer-lead">One five-hour hands-on workshop, delivered in person for ZEUSS.</p>
+<ul>
+<li><b>Training materials:</b> predesigned skills, prompts, templates and scripts, the presentation, and all materials developed during the event.</li>
+<li class="bonus"><b>Bonus:</b> 30 licences for the video training “Win EU Funds Before Drafting Starts” (€120 per seat) — total value <b>€3,600</b>, our investment in your researchers.</li>
+<li><b>Venue:</b> TU Dresden — central and easily reachable from all 14 partner universities. Travel costs included.</li>
+<li><b>Fee:</b> €3,000 + VAT.</li>
+<li><b>Payment:</b> full upfront payment −10 % (€2,700 + VAT).</li>
+<li><b>Payment terms:</b> with the upfront-payment discount, the full discounted fee is invoiced on confirmation, payable within 8 days. Otherwise, a 30 % down payment reserves the date and covers travel costs, and the remainder is invoiced after the training, payable within 8 days.</li>
+<li><b>Second cohort (optional):</b> the same workshop for a second group on the following day of the same visit — −30 % (€2,100 + VAT). Cost-efficient for your organisation, serving the interest of your researchers; both days fit inside the proposed December window.</li>
+<li><b>Mittweida option:</b> delivery at Mittweida is possible for a logistics supplement of €400 + VAT, covering the additional travel and time the location requires.</li><li><b>Dates:</b> December 2026 — 7–11 December available if agreed within one week; November or January alternatives on request.</li>
+<li><b>From your side:</b> a seminar room with projector and wifi; participants bring laptops with paid ChatGPT accounts.</li>
+<li><b>Alignment:</b> a call with the responsible person before delivery to fine-tune the agenda.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- DEMO:START -->
+<section class="offer model" aria-labelledby="model-title">
+<div class="offer-box" id="model-box">
+<button type="button" class="offer-head" id="model-open" aria-expanded="false" aria-controls="model-details">
+<span class="offer-big" id="model-title">See how a human-centred AI workflow outperforms the traditional approach</span>
+<span class="offer-sub">Try the interactive model</span>
+<span class="offer-chev">▾</span>
+</button>
+<div class="offer-fold" id="model-details">
+<div class="offer-inner">
+<p class="offer-lead">An interactive model of a proposal team’s year: choose how much AI support the team uses and how many human decision points stand before drafting — and watch what reaches funding. Built on Horizon Europe evaluation data.</p>
+<iframe class="model-frame" title="Interactive model: AI and human decision-making in the EU grant writing workflow" loading="lazy" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Impact of AI and Human Decision-Making on the EU Grant Writing Workflow&lt;/title&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js&quot;&gt;&lt;/script&gt;
+&lt;style&gt;
+  :root {
+    --purple: #362e6b; --orange: #d47a20;
+    --bg: #faf8f5; --card: #ffffff; --text: #221e33; --muted: #6f6a82;
+    --line: #e4e0d6; --field: #faf9f5; --soft: #ece9f6; --shadow: rgba(34,30,51,0.08);
+    --accent-text: #362e6b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Inter, &#x27;Segoe UI&#x27;, Arial, sans-serif; background: var(--bg); color: var(--text); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 22px 16px 26px; }
+  h1 { font-size: clamp(20px, 2.6vw, 26px); font-weight: 600; line-height: 1.25; margin-bottom: 4px; }
+  .lead { color: var(--muted); font-size: 14px; line-height: 1.45; margin-bottom: 14px; }
+
+  .top { display: grid; grid-template-columns: 1fr 1.35fr 1.35fr; gap: 10px; margin-bottom: 10px; }
+  .panel { background: var(--card); border-radius: 12px; box-shadow: 0 6px 18px var(--shadow); padding: 12px 14px; }
+  .control-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+  .control-head label { font-size: 13.5px; font-weight: 600; }
+  .control-head .val { font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .hint { font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.35; }
+
+  input[type=&quot;range&quot;] { width: 100%; height: 4px; margin: 12px 0 4px; background: var(--line); border-radius: 2px; outline: none; -webkit-appearance: none; }
+  input[type=&quot;range&quot;]::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; background: var(--orange); border-radius: 50%; cursor: pointer; }
+  input[type=&quot;range&quot;]::-moz-range-thumb { width: 18px; height: 18px; background: var(--orange); border-radius: 50%; border: none; cursor: pointer; }
+
+  .seg { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; background: var(--field); border: 1px solid var(--line); border-radius: 8px; padding: 3px; }
+  .seg button { border: none; background: transparent; color: var(--text); font-family: inherit; font-size: 13px; padding: 7px 2px; border-radius: 6px; cursor: pointer; }
+  .seg button:hover { background: var(--soft); }
+  .seg button.active { background: var(--purple); color: #fff; }
+  .seg.orange button.active { background: var(--orange); color: #221e33; }
+
+  .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 10px; }
+  .metric { background: var(--card); border-radius: 12px; box-shadow: 0 6px 18px var(--shadow); padding: 8px 14px; display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+  .metric .k { font-size: 11px; font-weight: 600; letter-spacing: 0.06em; color: var(--muted); text-transform: uppercase; }
+  .metric .v { font-size: clamp(20px, 2.6vw, 26px); font-weight: 700; font-variant-numeric: tabular-nums; }
+  .metric .v.purple { color: var(--accent-text); }
+  .metric.hours { flex-wrap: wrap; }
+  .bar { flex-basis: 100%; height: 4px; background: var(--line); border-radius: 3px; overflow: hidden; }
+  .bar span { display: block; height: 100%; width: 0; background: var(--orange); }
+
+  #canvas-container { background: #faf8f5; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 18px var(--shadow); }
+  #canvas-container canvas { display: block; width: 100% !important; height: auto !important; max-width: 100%; }
+
+  .foot { display: flex; align-items: center; gap: 14px; margin-top: 10px; flex-wrap: wrap; }
+  .replay { background: var(--purple); color: #fff; border: none; padding: 7px 14px; border-radius: 6px; font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer; }
+  .replay:hover { filter: brightness(1.1); }
+  .note { font-size: 12px; color: var(--muted); }
+  details { font-size: 12.5px; color: var(--muted); line-height: 1.5; margin-left: auto; }
+  details[open] { flex-basis: 100%; margin-left: 0; }
+  summary { cursor: pointer; font-weight: 600; color: var(--text); }
+  details table { border-collapse: collapse; margin: 8px 0; width: 100%; max-width: 440px; }
+  details td, details th { padding: 3px 6px; border-bottom: 1px solid var(--line); text-align: left; font-weight: 400; }
+  details th { color: var(--text); font-weight: 600; }
+
+  @media (max-width: 820px) {
+    .top { grid-template-columns: 1fr; }
+    .metrics { grid-template-columns: repeat(2, 1fr); }
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;wrap&quot;&gt;
+  &lt;h1&gt;Impact of AI and Human Decision-Making on the EU Grant Writing Workflow&lt;/h1&gt;
+  &lt;p class=&quot;lead&quot;&gt;Interactive model of a proposal team with 3,440 working hours (two person-years) for full EU proposals.&lt;/p&gt;
+
+  &lt;div class=&quot;top&quot;&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;div class=&quot;control-head&quot;&gt;&lt;label for=&quot;ideas&quot;&gt;Proposal ideas&lt;/label&gt;&lt;span class=&quot;val&quot; id=&quot;ideas-value&quot;&gt;40&lt;/span&gt;&lt;/div&gt;
+      &lt;input type=&quot;range&quot; id=&quot;ideas&quot; min=&quot;10&quot; max=&quot;60&quot; step=&quot;2&quot; value=&quot;40&quot; oninput=&quot;updateIdeas(this.value)&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;div class=&quot;control-head&quot;&gt;&lt;label&gt;AI support&lt;/label&gt;&lt;/div&gt;
+      &lt;div class=&quot;seg&quot; id=&quot;ai-seg&quot;&gt;
+        &lt;button onclick=&quot;setAI(0)&quot;&gt;None&lt;/button&gt;&lt;button onclick=&quot;setAI(1)&quot;&gt;Low&lt;/button&gt;&lt;button onclick=&quot;setAI(2)&quot;&gt;Medium&lt;/button&gt;&lt;button onclick=&quot;setAI(3)&quot;&gt;High&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;hint&quot; id=&quot;ai-hint&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel&quot;&gt;
+      &lt;div class=&quot;control-head&quot;&gt;&lt;label&gt;Human decision points&lt;/label&gt;&lt;/div&gt;
+      &lt;div class=&quot;seg orange&quot; id=&quot;pts-seg&quot;&gt;
+        &lt;button onclick=&quot;setPoints(0)&quot;&gt;None&lt;/button&gt;&lt;button onclick=&quot;setPoints(1)&quot;&gt;1&lt;/button&gt;&lt;button onclick=&quot;setPoints(2)&quot;&gt;2&lt;/button&gt;&lt;button onclick=&quot;setPoints(3)&quot;&gt;3&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;hint&quot; id=&quot;pts-hint&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;metrics&quot;&gt;
+    &lt;div class=&quot;metric&quot;&gt;&lt;div class=&quot;k&quot;&gt;Submitted&lt;/div&gt;&lt;div class=&quot;v&quot; id=&quot;m-sub&quot;&gt;0&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;metric&quot;&gt;&lt;div class=&quot;k&quot;&gt;Funded&lt;/div&gt;&lt;div class=&quot;v purple&quot; id=&quot;m-fund&quot;&gt;0&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;metric&quot;&gt;&lt;div class=&quot;k&quot;&gt;Success rate&lt;/div&gt;&lt;div class=&quot;v purple&quot; id=&quot;m-rate&quot;&gt;–&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;metric hours&quot;&gt;&lt;div class=&quot;k&quot;&gt;Hours used&lt;/div&gt;&lt;div class=&quot;v&quot; id=&quot;m-hours&quot;&gt;0&lt;/div&gt;&lt;div class=&quot;bar&quot;&gt;&lt;span id=&quot;m-bar&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div id=&quot;canvas-container&quot;&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;foot&quot;&gt;
+    &lt;button class=&quot;replay&quot; onclick=&quot;initializeSystem()&quot;&gt;↻ Replay&lt;/button&gt;
+    &lt;span class=&quot;note&quot;&gt;Illustrative model. Hours and idea scores are assumptions, not data.&lt;/span&gt;
+    &lt;details&gt;
+      &lt;summary&gt;Model assumptions and sources&lt;/summary&gt;
+      &lt;table&gt;
+        &lt;tr&gt;&lt;th&gt;AI support&lt;/th&gt;&lt;th&gt;Full proposal&lt;/th&gt;&lt;th&gt;Decision check, per idea&lt;/th&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;None&lt;/td&gt;&lt;td&gt;300 h&lt;/td&gt;&lt;td&gt;8 h&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Low&lt;/td&gt;&lt;td&gt;250 h&lt;/td&gt;&lt;td&gt;6 h&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;Medium&lt;/td&gt;&lt;td&gt;200 h&lt;/td&gt;&lt;td&gt;4 h&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;High&lt;/td&gt;&lt;td&gt;150 h&lt;/td&gt;&lt;td&gt;3 h&lt;/td&gt;&lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;p&gt;&lt;strong&gt;From sources.&lt;/strong&gt; Team budget: 2 person-years at 1,720 productive hours each (215 days × 8 h, Horizon Europe grant rules). Evaluator: 54.6% of Horizon Europe proposals are rated high quality, and only 30.1% of those are funded; overall success rate 16.4% (&lt;a href=&quot;https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A52025SC0110&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;European Commission, Horizon Europe interim evaluation, 2025&lt;/a&gt;). The cumulative rate has since fallen to about 14%.&lt;/p&gt;
+      &lt;p style=&quot;margin-top:6px&quot;&gt;&lt;strong&gt;Assumptions.&lt;/strong&gt; Hours per proposal and per check are practitioner estimates, not measured data. AI shortens drafting by at most half, because consortium building, negotiation and budgeting remain human work. Decision checks see an idea&#x27;s real strength imperfectly. AI drafting without human decisions is assumed to produce more generic text, pushing about 1 in 3 otherwise high-quality proposals below the threshold; each decision point reduces this, and with 3 there is no loss. Not modelled: competition rising as more applicants use AI.&lt;/p&gt;
+    &lt;/details&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// Team budget: 2 person-years at 1,720 productive hours each (215 days x 8 h, Horizon Europe AGA)
+const BUDGET = 3440;
+const SEED = 2036;
+// Evaluator structure from the Horizon Europe interim evaluation (European Commission, 2025):
+// 54.6% of proposals are high quality; only 30.1% of high-quality proposals are funded.
+const HQ_SHARE = 0.55, FUND_OF_HQ = 0.30;
+// Decision checks see an idea&#x27;s real strength with some noise; ideas below this are stopped.
+const PASS = 0.48, CHECK_NOISE = 0.08;
+// Assumption: AI drafting without human decisions reads generic and pushes some proposals below the quality threshold.
+const GENERIC_PENALTY = 0.12;
+const AI = [
+  { name: &#x27;None&#x27;,   draft: 300, dec: 8 },
+  { name: &#x27;Low&#x27;,    draft: 250, dec: 6 },
+  { name: &#x27;Medium&#x27;, draft: 200, dec: 4 },
+  { name: &#x27;High&#x27;,   draft: 150, dec: 3 }
+];
+const CHECKS = [
+  [&#x27;Call fit&#x27;, &#x27;&amp; eligibility&#x27;],
+  [&#x27;Prior projects&#x27;, &#x27;&amp; strategy&#x27;],
+  [&#x27;Consortium, evidence&#x27;, &#x27;&amp; evaluator risk&#x27;]
+];
+const COL = { bg: [250,248,245], ink: [42,38,51], mute: [111,106,130], grey: [154,150,168], purple: [54,46,107], orange: [212,122,32], orangeText: [146,80,20] };
+
+let params = { ideas: 40, ai: 0, points: 0 };
+function penalty() { return GENERIC_PENALTY * (params.ai / 3) * (1 - params.points / 3); }
+
+// Landscape geometry: flow runs left to right, labels on top
+const W = 1600, H = 660;
+const X = { poolL: 50, poolR: 220, entry: 290, decL: 300, decR: 740, draftL: 780, draftR: 1180, evalX: 1240, latL: 1295, latR: 1560 };
+const Y = { top: 170, bottom: 570, floor: 618, labels: 58 };
+const MOVE = 4.5;
+
+let ideas = [], model = {}, trail, t = 0, live = {}, finished = false, ready = false, links = [], linksDirty = false;
+
+function setup() {
+  pixelDensity(Math.min(2, window.devicePixelRatio || 1));
+  createCanvas(W, H).parent(&#x27;canvas-container&#x27;);
+  trail = createGraphics(W, H);
+  textFont(&#x27;Inter, Segoe UI, sans-serif&#x27;);
+  ready = true;
+  refreshUI();
+  initializeSystem();
+}
+
+function gateX(k, P) { return lerp(X.decL, X.decR, (k + 0.5) / P); }
+
+function buildModel() {
+  randomSeed(SEED); noiseSeed(SEED);
+  const N = params.ideas, lvl = AI[params.ai], P = params.points;
+  ideas = [];
+  const cols = Math.max(3, Math.ceil(Math.sqrt(N / 2.4)));
+  const rows = Math.ceil(N / cols);
+  const sx = (X.poolR - X.poolL) / Math.max(1, cols - 1);
+  const sy = rows &gt; 1 ? Math.min(42, (Y.bottom + 30 - Y.top) / (rows - 1)) : 0;
+  const top = (Y.top + Y.bottom) / 2 - sy * (rows - 1) / 2;
+
+  for (let i = 0; i &lt; N; i++) {
+    const q = random();
+    const s = [0,1,2].map(() =&gt; constrain(q * 0.6 + random() * 0.4 + randomGaussian(0, 0.05), 0, 1));
+    const seen = s.map(v =&gt; constrain(v + randomGaussian(0, CHECK_NOISE), 0, 1));
+    const c = i % cols, r = Math.floor(i / cols);
+    ideas.push({
+      i, s, seen, qual: (s[0]+s[1]+s[2]) / 3, fundable: false,
+      homeX: X.poolL + c * sx + random(-3, 3), homeY: top + r * sy + random(-3, 3),
+      laneY: random(Y.top, Y.bottom), latX: random(),
+      phase: random(1000), jitter: random(), fate: &#x27;unused&#x27;, stopAt: -1, releaseAt: Infinity
+    });
+  }
+  const asc = [...ideas].sort((a, b) =&gt; a.qual - b.qual);
+  const bar = asc[Math.min(N - 1, Math.round(N * (1 - HQ_SHARE)))].qual;
+  const pen = penalty();
+
+  const order = shuffle([...Array(N).keys()]);
+  let b = BUDGET, halted = false;
+  const tot = { submitted: 0, funded: 0 };
+  for (const idx of order) {
+    const d = ideas[idx];
+    if (halted) continue;
+    let fate = &#x27;go&#x27;;
+    for (let k = 0; k &lt; P; k++) {
+      if (b &lt; lvl.dec) { halted = true; fate = &#x27;unused&#x27;; break; }
+      b -= lvl.dec;
+      if (d.seen[k] &lt; PASS) { fate = &#x27;stop&#x27;; d.stopAt = k; break; }
+    }
+    if (fate === &#x27;unused&#x27;) continue;
+    if (fate === &#x27;stop&#x27;) { d.fate = &#x27;stop&#x27;; continue; }
+    if (b &lt; lvl.draft) { halted = true; d.fate = &#x27;nohours&#x27;; continue; }
+    b -= lvl.draft; d.fate = &#x27;drafted&#x27;; tot.submitted++;
+  }
+  // Evaluator: proposals above the quality threshold compete; only ~30% of them are funded (best scores first)
+  const hq = ideas.filter(d =&gt; d.fate === &#x27;drafted&#x27; &amp;&amp; d.qual - pen &gt;= bar - 1e-9).sort((a, b) =&gt; b.qual - a.qual);
+  const nFund = Math.floor(hq.length * FUND_OF_HQ + 1e-9);
+  hq.slice(0, nFund).forEach(d =&gt; { d.fundable = true; });
+  tot.funded = nFund;
+  tot.unused = ideas.filter(d =&gt; d.fate === &#x27;unused&#x27;).length;
+  tot.hours = BUDGET - b;
+  const released = order.filter(idx =&gt; ideas[idx].fate !== &#x27;unused&#x27;);
+  const gap = constrain(640 / Math.max(1, released.length), 6, 26);
+  released.forEach((idx, k) =&gt; { ideas[idx].releaseAt = Math.floor(8 + k * gap); });
+  model = { tot, lastRelease: released.length ? Math.floor(8 + (released.length - 1) * gap) : 0 };
+}
+
+function initializeSystem() {
+  if (!ready) return;
+  buildModel();
+  for (const d of ideas) {
+    Object.assign(d, { state: &#x27;pool&#x27;, x: d.homeX, y: d.homeY, px: d.homeX, py: d.homeY, vx: 0, vy: 0, nextGate: 0, draftPaid: 0, passed: false, floorY: Y.floor - d.jitter * 12 });
+  }
+  live = { hours: 0, submitted: 0, funded: 0 };
+  links = []; linksDirty = false;
+  trail.clear();
+  t = 0; finished = false;
+  updateMetrics();
+  loop();
+}
+
+function startFall(d) { d.state = &#x27;fall&#x27;; d.vy = -1.2 - d.jitter; d.vx = 1.2; }
+
+function updateIdea(d) {
+  const lvl = AI[params.ai], P = params.points;
+  if (d.state === &#x27;pool&#x27;) { if (t &gt;= d.releaseAt) d.state = &#x27;leave&#x27;; else return; }
+  d.px = d.x; d.py = d.y;
+  switch (d.state) {
+    case &#x27;leave&#x27;:
+      d.x += (X.entry - d.x) * 0.14; d.y += (d.laneY - d.y) * 0.14;
+      if (Math.abs(d.x - X.entry) &lt; 2) { d.x = X.entry; d.state = &#x27;gates&#x27;; d.px = d.x; d.py = d.y; }
+      break;
+    case &#x27;gates&#x27;: {
+      const n = noise(d.phase, t * 0.02) - 0.5;
+      d.vy = d.vy * 0.88 + n * 1.9 + (d.laneY - d.y) * 0.01;
+      d.x += MOVE; d.y = constrain(d.y + d.vy, Y.top - 20, Y.bottom + 20);
+      while (d.nextGate &lt; P &amp;&amp; d.x &gt;= gateX(d.nextGate, P)) {
+        live.hours += lvl.dec;
+        if (d.fate === &#x27;stop&#x27; &amp;&amp; d.stopAt === d.nextGate) { d.nextGate++; startFall(d); return; }
+        d.nextGate++;
+      }
+      if (d.x &gt;= X.draftL) {
+        if (d.fate === &#x27;nohours&#x27;) { startFall(d); return; }
+        d.state = &#x27;draft&#x27;; d.passed = true;
+      }
+      break;
+    }
+    case &#x27;draft&#x27;: {
+      const span = X.draftR - X.draftL, v = span / (lvl.draft * 0.62);
+      d.x += v;
+      d.y += (d.laneY - d.y) * 0.05 + (noise(d.phase, t * 0.02) - 0.5) * 0.4;
+      const pay = Math.min(lvl.draft - d.draftPaid, lvl.draft * v / span);
+      d.draftPaid += pay; live.hours += pay;
+      if (d.x &gt;= X.draftR) { live.hours += lvl.draft - d.draftPaid; d.draftPaid = lvl.draft; d.state = &#x27;toEval&#x27;; }
+      break;
+    }
+    case &#x27;toEval&#x27;:
+      d.x += MOVE; d.y += (d.laneY - d.y) * 0.05;
+      if (d.x &gt;= X.evalX) {
+        live.submitted++;
+        if (d.fundable) { d.state = &#x27;settle&#x27;; live.funded++; } else startFall(d);
+      }
+      break;
+    case &#x27;fall&#x27;:
+      d.vy += 0.3; d.vx *= 0.95; d.x += d.vx; d.y += d.vy;
+      if (d.y &gt;= d.floorY) { d.y = d.floorY; d.state = &#x27;rest&#x27;; stamp(d); }
+      break;
+    case &#x27;settle&#x27;: {
+      const tx = lerp(X.latL, X.latR, d.latX);
+      d.x = lerp(d.x, tx, 0.08); d.y = lerp(d.y, d.laneY, 0.08);
+      if (Math.abs(d.x - tx) &lt; 0.5 &amp;&amp; Math.abs(d.y - d.laneY) &lt; 0.5) { d.x = tx; d.y = d.laneY; d.state = &#x27;done&#x27;; linksDirty = true; }
+      break;
+    }
+  }
+}
+
+function colorOf(d) {
+  if (d.state === &#x27;settle&#x27; || d.state === &#x27;done&#x27;) return [COL.purple, 210];
+  if (d.state === &#x27;fall&#x27; || d.state === &#x27;rest&#x27;) return d.passed ? [COL.purple, 45] : [COL.grey, 65];
+  if (d.passed) return [COL.purple, 100];
+  return [COL.grey, 75];
+}
+
+function drawTrail(d) {
+  const st = d.state;
+  if (st === &#x27;pool&#x27; || st === &#x27;rest&#x27; || st === &#x27;done&#x27; || st === &#x27;leave&#x27;) return;
+  const [c, a] = colorOf(d);
+  trail.stroke(c[0], c[1], c[2], a);
+  trail.strokeWeight(st === &#x27;draft&#x27; ? 1.7 : 1.3);
+  trail.line(d.px, d.py, d.x, d.y);
+}
+
+function stamp(d) {
+  const c = d.passed ? COL.purple : COL.grey;
+  trail.noStroke(); trail.fill(c[0], c[1], c[2], d.passed ? 100 : 140);
+  trail.circle(d.x, d.y, 5);
+}
+
+function computeLinks() {
+  const done = ideas.filter(d =&gt; d.state === &#x27;done&#x27;);
+  const seen = new Set(); links = [];
+  for (const a of done) {
+    done.filter(b =&gt; b !== a).map(b =&gt; ({ b, dd: (a.x-b.x)**2 + (a.y-b.y)**2 })).sort((p, q) =&gt; p.dd - q.dd).slice(0, 2)
+      .forEach(n =&gt; { const key = Math.min(a.i, n.b.i) + &#x27;-&#x27; + Math.max(a.i, n.b.i); if (!seen.has(key)) { seen.add(key); links.push([a, n.b]); } });
+  }
+  linksDirty = false;
+}
+
+function draw() {
+  let active = 0;
+  for (const d of ideas) {
+    updateIdea(d); drawTrail(d);
+    if (d.releaseAt !== Infinity &amp;&amp; d.state !== &#x27;rest&#x27; &amp;&amp; d.state !== &#x27;done&#x27;) active++;
+  }
+  if (linksDirty) computeLinks();
+  t++;
+
+  background(COL.bg[0], COL.bg[1], COL.bg[2]);
+  drawStage();
+  image(trail, 0, 0);
+  drawFront();
+  if (t % 3 === 0) updateMetrics();
+
+  if (active === 0 &amp;&amp; t &gt; model.lastRelease + 2 &amp;&amp; !finished) {
+    finished = true;
+    noLoop();
+    updateMetrics();
+    setTimeout(() =&gt; redraw(), 0);
+  }
+}
+
+function label(x, lines, col) {
+  noStroke(); textAlign(CENTER, BASELINE);
+  textStyle(BOLD); textSize(22); fill(col[0], col[1], col[2]); text(lines[0], x, Y.labels);
+  textStyle(NORMAL); textSize(17); fill(COL.mute[0], COL.mute[1], COL.mute[2]);
+  lines.slice(1).forEach((l, k) =&gt; text(l, x, Y.labels + 26 + k * 22));
+}
+
+function drawStage() {
+  const lvl = AI[params.ai], P = params.points;
+  push();
+  noStroke();
+  fill(COL.orange[0], COL.orange[1], COL.orange[2], P ? 18 : 0);
+  rect(X.decL - 10, Y.top - 34, X.decR - X.decL + 20, Y.floor + 12 - (Y.top - 34), 10);
+  fill(COL.purple[0], COL.purple[1], COL.purple[2], 16);
+  rect(X.draftL, Y.top - 34, X.draftR - X.draftL, Y.floor + 12 - (Y.top - 34), 10);
+
+  for (let k = 0; k &lt; P; k++) {
+    const gx = gateX(k, P);
+    fill(COL.orange[0], COL.orange[1], COL.orange[2], 180);
+    for (let y = Y.top - 24; y &lt; Y.floor; y += 11) circle(gx, y, 2.8);
+    fill(COL.orange[0], COL.orange[1], COL.orange[2]);
+    circle(gx, Y.top - 34, 13);
+  }
+
+  stroke(COL.ink[0], COL.ink[1], COL.ink[2], 130); strokeWeight(1.6);
+  drawingContext.setLineDash([8, 8]);
+  line(X.evalX, Y.top - 34, X.evalX, Y.floor + 10);
+  drawingContext.setLineDash([]);
+  stroke(COL.mute[0], COL.mute[1], COL.mute[2], 60); strokeWeight(1);
+  line(X.entry, Y.floor + 14, W - 40, Y.floor + 14);
+
+  label((X.poolL + X.poolR) / 2, [&#x27;Proposal ideas&#x27;, `${params.ideas} ideas`], COL.ink);
+  if (P === 0) {
+    label((X.decL + X.decR) / 2, [&#x27;No decision points&#x27;, &#x27;all ideas go straight to drafting&#x27;], COL.mute);
+  } else {
+    for (let k = 0; k &lt; P; k++) {
+      const gx = gateX(k, P);
+      noStroke(); textAlign(CENTER, BASELINE);
+      textStyle(BOLD); textSize(19); fill(COL.orangeText[0], COL.orangeText[1], COL.orangeText[2]); text(`Decision ${k + 1}`, gx, Y.labels);
+      textStyle(NORMAL); textSize(15); fill(COL.ink[0], COL.ink[1], COL.ink[2], 200);
+      text(CHECKS[k][0], gx, Y.labels + 24); text(CHECKS[k][1], gx, Y.labels + 44);
+    }
+  }
+  const pen = Math.round(penalty() * 100);
+  label((X.draftL + X.draftR) / 2, pen &gt; 0
+    ? [&#x27;Drafting&#x27;, `${lvl.draft} h per proposal`, &#x27;generic text without decisions lowers quality&#x27;]
+    : [&#x27;Drafting&#x27;, `${lvl.draft} h per proposal`], COL.purple);
+  label(X.evalX, [&#x27;Evaluator&#x27;, &#x27;funds 3 in 10&#x27;, &#x27;high-quality&#x27;], COL.ink);
+  label((X.latL + X.latR) / 2 + 20, [&#x27;Funded&#x27;], COL.purple);
+  pop();
+}
+
+function drawFront() {
+  push();
+  stroke(COL.purple[0], COL.purple[1], COL.purple[2], 120); strokeWeight(1.2);
+  for (const [a, b] of links) line(a.x, a.y, b.x, b.y);
+  noStroke();
+  for (const d of ideas) {
+    if (d.state === &#x27;rest&#x27;) continue;
+    if (d.state === &#x27;pool&#x27;) {
+      if (d.releaseAt === Infinity &amp;&amp; (finished || t &gt; model.lastRelease)) {
+        noFill(); stroke(COL.grey[0], COL.grey[1], COL.grey[2], 160); strokeWeight(1.6); circle(d.x, d.y, 12); noStroke();
+      } else { fill(COL.grey[0], COL.grey[1], COL.grey[2], 210); circle(d.x, d.y, 12); }
+      continue;
+    }
+    if (d.state === &#x27;done&#x27;) {
+      noFill(); stroke(COL.orange[0], COL.orange[1], COL.orange[2], 235); strokeWeight(2.2); circle(d.x, d.y, 22); noStroke();
+      fill(COL.purple[0], COL.purple[1], COL.purple[2]); circle(d.x, d.y, 12);
+      continue;
+    }
+    const [c] = colorOf(d);
+    fill(c[0], c[1], c[2], 230); circle(d.x, d.y, d.state === &#x27;draft&#x27; ? 8 : 7);
+  }
+  if (finished &amp;&amp; model.tot.unused &gt; 0) {
+    textAlign(CENTER, BASELINE); textStyle(NORMAL); textSize(17); fill(COL.mute[0], COL.mute[1], COL.mute[2]);
+    text(`${model.tot.unused} not reached: out of hours`, (X.poolL + X.poolR) / 2 + 30, Y.floor + 34);
+  }
+  pop();
+}
+
+function updateMetrics() {
+  const src = finished ? model.tot : live;
+  document.getElementById(&#x27;m-sub&#x27;).textContent = src.submitted;
+  document.getElementById(&#x27;m-fund&#x27;).textContent = src.funded;
+  document.getElementById(&#x27;m-rate&#x27;).textContent = src.submitted &gt; 0 ? Math.round(100 * src.funded / src.submitted) + &#x27;%&#x27; : &#x27;–&#x27;;
+  document.getElementById(&#x27;m-hours&#x27;).textContent = Math.round(src.hours) + &#x27; h&#x27;;
+  document.getElementById(&#x27;m-bar&#x27;).style.width = Math.min(100, 100 * src.hours / BUDGET) + &#x27;%&#x27;;
+}
+
+function refreshUI() {
+  document.querySelectorAll(&#x27;#ai-seg button&#x27;).forEach((b, k) =&gt; b.classList.toggle(&#x27;active&#x27;, k === params.ai));
+  document.querySelectorAll(&#x27;#pts-seg button&#x27;).forEach((b, k) =&gt; b.classList.toggle(&#x27;active&#x27;, k === params.points));
+  const lvl = AI[params.ai], P = params.points;
+  document.getElementById(&#x27;ai-hint&#x27;).textContent = `Drafting ${lvl.draft} h per proposal · check ${lvl.dec} h per idea`;
+  document.getElementById(&#x27;pts-hint&#x27;).textContent = P === 0 ? &#x27;No checks before drafting&#x27; : `${P} check${P &gt; 1 ? &#x27;s&#x27; : &#x27;&#x27;} before drafting`;
+  document.getElementById(&#x27;ideas-value&#x27;).textContent = params.ideas;
+}
+
+function updateIdeas(v) { params.ideas = parseInt(v, 10); refreshUI(); initializeSystem(); }
+function setAI(k) { params.ai = k; refreshUI(); initializeSystem(); }
+function setPoints(k) { params.points = k; refreshUI(); initializeSystem(); }
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+<p class="model-print">The interactive model is part of the online version of this proposal.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- DEMO:END -->
+<noscript><style>.offer-fold{max-height:none}</style></noscript>
+</main>
+<footer><span>Global Disruption · Kristjan Zemljič</span><span>Proposal for alignment · September 2026</span></footer>
+</div><script>
+const panels = [...document.querySelectorAll('details')];
+const cards = [...document.querySelectorAll('.workshop')];
+const steps = [...document.querySelectorAll('.steps a')];
+const railLinks = [...document.querySelectorAll('.rail-links a')];
+const result = document.querySelector('.journey-result');
+const rail = document.querySelector('.reading-rail');
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+let programTarget=false;
+const seed=document.querySelector('.program-seed');
+const programReveal=document.getElementById('program-reveal');
+const programInner=document.querySelector('.program-reveal-inner');
+let sceneAnimations=[],sceneRevision=0;
+const stageData = [
+ ['I can analyse a call','I structure a Horizon Europe call with ChatGPT, extract the facts that matter and check every answer against the source.'],
+ ['I can defend a GO/NO-GO','I gather decision evidence with AI, verify and endorse it myself, and decide what moves the project forward.'],
+ ['I can check a concept against the call','I find the gaps in objectives and work plans and strengthen structure and argumentation before drafting starts.'],
+ ['We can run an AI-supported process','We map where AI works and where the human decides, design the next steps of our AI-supported workflow in groups and leave with a shared blueprint.']
+];
+let current = -1;
+function setStage(index, animate = true) {
+ const i = Math.max(0, Math.min(3, index));
+ if (i === current) return;
+ current = i;
+ steps.forEach((a,j) => {
+  if(j===i) a.setAttribute('aria-current','step'); else a.removeAttribute('aria-current');
+  a.classList.toggle('earlier',j<i);
+ });
+ railLinks.forEach((a,j) => {if(j===i) a.setAttribute('aria-current','step');else a.removeAttribute('aria-current');});
+ cards.forEach((card,j) => card.classList.toggle('is-current',j===i));
+ document.querySelector('.steps').style.setProperty('--reach',(i*25)+'%');
+ result.style.setProperty('--stage-width',((i+1)*25)+'%');
+ document.querySelector('.result-number').textContent=String(i+1).padStart(2,'0');
+ document.getElementById('rail-stage').textContent=String(i+1).padStart(2,'0');
+ document.querySelector('.result-label').textContent='After Block '+(i+1);
+ document.querySelector('.result-title').textContent=stageData[i][0];
+ document.querySelector('.result-copy').textContent=stageData[i][1];
+ document.getElementById('previous-stage').disabled=i===0;
+ document.getElementById('next-stage').disabled=i===3;
+ const copy=document.querySelector('.result-copy-wrap');
+ copy.classList.remove('changing');
+ if(animate&&!reduced.matches){void copy.offsetWidth;copy.classList.add('changing');}
+}
+document.querySelector('.toolbar').hidden=false;
+result.hidden=false;rail.hidden=false;
+
+const foldStates = panels.map(panel => ({
+ panel, body:panel.querySelector('.fold-body'), inner:panel.querySelector('.fold-inner'),
+ toggle:panel.querySelector('summary'), indicator:panel.querySelector('.fold-indicator'),
+ target:true, animations:[], revision:0
+}));
+function syncFoldButtons(){
+ document.getElementById('expand').setAttribute('aria-pressed',String(programTarget));
+ document.getElementById('collapse').setAttribute('aria-pressed',String(!programTarget));
+}
+function settleFold(state, open){
+ state.revision++;
+ state.animations.forEach(a=>a.cancel());state.animations=[];
+ state.target=open;state.panel.open=open;
+ state.body.inert=!open;
+ state.toggle.setAttribute('aria-expanded',String(open));
+ state.indicator.textContent=open?'−':'+';
+ state.panel.closest('.workshop').classList.remove('is-folding');
+}
+function animateFold(index, open, delay=0){
+ const state=foldStates[index];
+ if(state.target===open&&!state.animations.length)return;
+ const bodyHeight=state.panel.open?state.body.getBoundingClientRect().height:0;
+ const visual=window.getComputedStyle(state.inner);
+ const fromOpacity=state.panel.open?visual.opacity:'0';
+ const fromTransform=state.panel.open?visual.transform:'perspective(1000px) rotateX(-9deg) scaleY(.97)';
+ const revision=++state.revision;
+ state.animations.forEach(a=>a.cancel());state.animations=[];
+ state.target=open;
+ if(!open&&state.body.contains(document.activeElement))state.toggle.focus({preventScroll:true});
+ state.body.inert=!open;
+ state.toggle.setAttribute('aria-expanded',String(open));
+ state.indicator.textContent=open?'−':'+';
+ if(reduced.matches||typeof state.body.animate!=='function'){
+  settleFold(state,open);syncFoldButtons();return;
+ }
+ // Keep native details open until the closing animation has completed.
+ state.panel.open=true;
+ const fullHeight=state.inner.getBoundingClientRect().height;
+ state.panel.closest('.workshop').classList.add('is-folding');
+ const timing={duration:620,delay,easing:'cubic-bezier(.22,.75,.22,1)',fill:'both'};
+ const heightAnimation=state.body.animate([{height:bodyHeight+'px'},{height:(open?fullHeight:0)+'px'}],timing);
+ const hingeAnimation=state.inner.animate([
+  {opacity:fromOpacity,transform:fromTransform==='none'?'perspective(1000px) rotateX(0deg) scaleY(1)':fromTransform},
+  {opacity:open?1:0,transform:open?'perspective(1000px) rotateX(0deg) scaleY(1)':'perspective(1000px) rotateX(-9deg) scaleY(.97)'}
+ ],timing);
+ state.animations=[heightAnimation,hingeAnimation];
+ Promise.all(state.animations.map(a=>a.finished)).then(()=>{
+  if(state.revision===revision){settleFold(state,open);syncFoldButtons();updateReading();}
+ }).catch(()=>{}); // A new click intentionally replaces the animation in progress.
+ syncFoldButtons();
+}
+function foldAll(open){
+ foldStates.forEach((state,i)=>animateFold(i,open,reduced.matches?0:i*85));
+ syncFoldButtons();
+}
+foldStates.forEach((state,i)=>{
+ settleFold(state,true);
+ state.toggle.addEventListener('click',event=>{
+  event.preventDefault();animateFold(i,!state.target);setStage(i);
+ });
+});
+syncFoldButtons();
+reduced.addEventListener('change',()=>{
+ if(reduced.matches){foldStates.forEach(state=>settleFold(state,state.target));syncFoldButtons();}
+});
+
+
+function settleScene(open){
+ sceneRevision++;
+ sceneAnimations.forEach(a=>a.cancel());sceneAnimations=[];
+ programTarget=open;
+ programReveal.style.height=open?'auto':'0px';
+ seed.style.height=open?'0px':'320px';
+ programReveal.inert=!open;seed.inert=open;
+ programReveal.setAttribute('aria-hidden',String(!open));
+ seed.setAttribute('aria-hidden',String(open));
+ seed.classList.toggle('is-unfolding',open);
+ document.body.classList.toggle('scene-closed',!open);
+ document.getElementById('expand').setAttribute('aria-expanded',String(open));
+ document.getElementById('collapse').setAttribute('aria-expanded',String(open));
+ syncFoldButtons();
+}
+function revealProgram(open){
+ if(programTarget===open&&!sceneAnimations.length)return;
+ const currentHeight=programReveal.getBoundingClientRect().height;
+ const seedHeight=seed.getBoundingClientRect().height;
+ const visual=window.getComputedStyle(programInner);
+ const opacity=visual.opacity,transform=visual.transform;
+ const revision=++sceneRevision;
+ sceneAnimations.forEach(a=>a.cancel());sceneAnimations=[];
+ programTarget=open;
+ // Both buttons operate on the complete programme, including the closing sections.
+ if(open)foldStates.forEach(state=>settleFold(state,true));
+ if((!open&&programReveal.contains(document.activeElement))||(open&&seed.contains(document.activeElement))){
+  document.getElementById(open?'collapse':'expand').focus({preventScroll:true});
+ }
+ programReveal.inert=!open;seed.inert=open;
+ programReveal.setAttribute('aria-hidden',String(!open));seed.setAttribute('aria-hidden',String(open));
+ document.body.classList.toggle('scene-closed',!open);
+ seed.classList.toggle('is-unfolding',open);
+ document.getElementById('expand').setAttribute('aria-expanded',String(open));
+ document.getElementById('collapse').setAttribute('aria-expanded',String(open));
+ syncFoldButtons();
+ if(reduced.matches||typeof programReveal.animate!=='function'){settleScene(open);return;}
+ const targetHeight=programInner.getBoundingClientRect().height;
+ const timing={duration:850,easing:'cubic-bezier(.22,.75,.22,1)',fill:'both'};
+ sceneAnimations=[
+  programReveal.animate([{height:currentHeight+'px'},{height:(open?targetHeight:0)+'px'}],{...timing,delay:open?160:0}),
+  programInner.animate([
+   {opacity:currentHeight<1?0:opacity,transform:currentHeight<1?'perspective(1400px) rotateX(-7deg) scale(.94)':transform},
+   {opacity:open?1:0,transform:open?'perspective(1400px) rotateX(0deg) scale(1)':'perspective(1400px) rotateX(-7deg) scale(.94)'}
+  ],{...timing,delay:open?160:0}),
+  seed.animate([{height:seedHeight+'px'},{height:(open?0:320)+'px'}],timing)
+ ];
+ Promise.all(sceneAnimations.map(a=>a.finished)).then(()=>{
+  if(sceneRevision===revision){settleScene(open);updateReading();}
+ }).catch(()=>{});
+}
+seed.hidden=false;
+settleScene(false);
+['expand','collapse'].forEach(id=>document.getElementById(id).setAttribute('aria-controls','program-reveal'));
+document.getElementById('open-cube').addEventListener('click',()=>revealProgram(true));
+document.getElementById('pause-cube').addEventListener('click',event=>{
+ const paused=seed.classList.toggle('is-paused');
+ event.currentTarget.setAttribute('aria-pressed',String(paused));
+ event.currentTarget.textContent=paused?'Resume rotation':'Pause rotation';
+});
+reduced.addEventListener('change',()=>{if(reduced.matches)settleScene(programTarget);});
+
+setStage(0,false);
+document.getElementById('expand').addEventListener('click',()=>revealProgram(true));
+document.getElementById('collapse').addEventListener('click',()=>revealProgram(false));
+document.getElementById('print').addEventListener('click',()=>window.print());
+steps.forEach((link,i)=>link.addEventListener('click',event=>{event.preventDefault();setStage(i);}));
+railLinks.forEach((link,i)=>link.addEventListener('click',()=>{if(!programTarget)revealProgram(true);animateFold(i,true);setStage(i);}));
+document.getElementById('previous-stage').addEventListener('click',()=>setStage(current-1));
+document.getElementById('next-stage').addEventListener('click',()=>setStage(current+1));
+panels.forEach((p,i)=>p.addEventListener('toggle',()=>{if(p.open&&p.matches(':focus-within'))setStage(i);}));
+let ticking=false;
+function updateReading(){
+ ticking=false;
+ const program=document.getElementById('program').getBoundingClientRect();
+ const reading=programTarget&&program.top<80&&program.bottom>160;
+ rail.classList.toggle('visible',reading);
+ rail.inert=!reading;
+ if(reading){
+  let active=0;
+  cards.forEach((card,i)=>{if(card.getBoundingClientRect().top<innerHeight*.42)active=i;});
+  setStage(active,false);
+ }
+}
+window.addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(updateReading);}},{passive:true});
+window.addEventListener('resize',updateReading);
+updateReading();
+if('IntersectionObserver' in window){
+ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(entry.isIntersecting){entry.target.classList.add('entered');observer.unobserve(entry.target);}
+ }),{threshold:.12});
+ cards.forEach(card=>observer.observe(card));
+}
+let printState,printScene;
+window.addEventListener('beforeprint',()=>{if(!printState){printState=foldStates.map(s=>s.target);printScene=programTarget;}foldStates.forEach(s=>settleFold(s,true));settleScene(true);});
+window.addEventListener('afterprint',()=>{if(printState)foldStates.forEach((s,i)=>settleFold(s,printState[i]));printState=undefined;settleScene(printScene??false);printScene=undefined;});
+</script>
+<script>
+(function(){
+const box=document.getElementById('offer-box'),head=document.getElementById('offer-open'),fold=document.getElementById('offer-details');
+if(!box||!head||!fold)return;
+head.addEventListener('click',()=>{
+const open=!box.classList.contains('open');
+box.classList.toggle('open',open);
+head.setAttribute('aria-expanded',String(open));
+fold.style.maxHeight=open?fold.scrollHeight+'px':'0';
+});
+window.addEventListener('resize',()=>{if(box.classList.contains('open'))fold.style.maxHeight=fold.scrollHeight+'px';});
+})();
+(function(){
+const box=document.getElementById('model-box'),head=document.getElementById('model-open'),fold=document.getElementById('model-details');
+if(!box||!head||!fold)return;
+head.addEventListener('click',()=>{
+const open=!box.classList.contains('open');
+box.classList.toggle('open',open);
+head.setAttribute('aria-expanded',String(open));
+fold.style.maxHeight=open?fold.scrollHeight+'px':'0';
+});
+window.addEventListener('resize',()=>{if(box.classList.contains('open'))fold.style.maxHeight=fold.scrollHeight+'px';});
+})();
+</script></body></html>
